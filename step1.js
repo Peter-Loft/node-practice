@@ -9,7 +9,7 @@ const fsP = require('fs/promises');
   */
 async function cat(path) {
   try {
-    let fileContents = await fsP.readFile(path, "utf8");
+    const fileContents = await fsP.readFile(path, "utf8");
     console.log("Files contents: ", fileContents);
   }
   catch (err) {
